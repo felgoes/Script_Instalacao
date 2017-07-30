@@ -14,9 +14,7 @@ sudo apt-get install postgresql
 sudo su postgres
 psql
 alter user postgres with password '123';
-create role odoo with password '123' nosuperuser inherit createdb createrole replication;
 create user odoo with password '123' nosuperuser inherit createdb createrole replication;
-wget https://raw.githubusercontent.com/Trust-Code/Tutorial-Instalacao/master/apt-requirements
 \q
 exit
 
