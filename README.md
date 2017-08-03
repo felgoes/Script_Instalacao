@@ -1,45 +1,45 @@
 # Script_Instalacao
 
-Se houver erro LOCALE:
-
-export LC_ALL="en_US.UTF-8"
-export LC_CTYPE="en_US.UTF-8"
-sudo dpkg-reconfigure locales
-
-
-Instalar Postgres / Criar Usuário:
-
-sudo apt-get update
-sudo apt-get install postgresql
-sudo su postgres
-psql
-alter user postgres with password '123';
-create user odoo with password '123' nosuperuser inherit createdb createrole replication;
-\q
-exit
+<h4> Se houver erro LOCALE ao criar SSH: </h4>
+ 
+export LC_ALL="en_US.UTF-8" <br/>
+export LC_CTYPE="en_US.UTF-8" <br/>
+sudo dpkg-reconfigure locales <br/>
 
 
-Instalar Dependências:
+<h2> Instalar Postgres / Criar Usuário: </h2>
 
-wget https://raw.githubusercontent.com/Trust-Code/Tutorial-Instalacao/master/apt-requirements
-wget https://raw.githubusercontent.com/Trust-Code/Tutorial-Instalacao/master/pip-requirements
-sudo apt-get install -y --no-install-recommends $(grep -v '^#' apt-requirements)
-sudo pip install --upgrade pip
-sudo apt-get install python-setuptools
-sudo pip install -r pip-requirements
-sudo npm install -g less
-sudo ln -s /usr/bin/nodejs /usr/bin/node
-sudo apt-get install wkhtmltopdf 
+sudo apt-get update <br/>
+sudo apt-get install postgresql <br/>
+sudo su postgres <br/>
+psql <br/>
+alter user postgres with password '123'; <br/>
+create user odoo with password '123' nosuperuser inherit createdb createrole replication; <br/>
+\q <br/>
+exit <br/>
 
 
-Baixar Código do Odoo:
+<h2> Instalar Dependências: </h2>
 
-sudo git clone --depth 1 --branch 10.0 https://github.com/odoo/odoo.git
+wget https://raw.githubusercontent.com/Trust-Code/Tutorial-Instalacao/master/apt-requirements <br/>
+wget https://raw.githubusercontent.com/Trust-Code/Tutorial-Instalacao/master/pip-requirements <br/>
+sudo apt-get install -y --no-install-recommends $(grep -v '^#' apt-requirements) <br/>
+sudo pip install --upgrade pip <br/>
+sudo apt-get install python-setuptools <br/>
+sudo pip install -r pip-requirements <br/>
+sudo npm install -g less <br/>
+sudo ln -s /usr/bin/nodejs /usr/bin/node <br/>
+sudo apt-get install wkhtmltopdf  <br/>
+
+
+<h2> Baixar Código do Odoo: </h2>
+
+sudo git clone --depth 1 --branch 10.0 https://github.com/odoo/odoo.git <br/>
 
 
 Iniciar o Odoo:
 
-cd odoo
-wget https://raw.githubusercontent.com/Trust-Code/Tutorial-Instalacao/master/odoo-config
-./odoo-bin --config=odoo-config
-000.000.0.0:8069
+cd odoo <br/>
+wget https://raw.githubusercontent.com/Trust-Code/Tutorial-Instalacao/master/odoo-config <br/>
+./odoo-bin --config=odoo-config <br/>
+000.000.0.0:8069 <br/>
