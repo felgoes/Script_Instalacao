@@ -1,11 +1,12 @@
 # Script_Instalacao
-
+<table><tr><td>
 <h4> Se houver erro LOCALE ao criar SSH: </h4>
  
 export LC_ALL="en_US.UTF-8" <br/>
 export LC_CTYPE="en_US.UTF-8" <br/>
 sudo dpkg-reconfigure locales <br/>
 
+</td></tr></table>
 
 <h2> Instalar Postgres / Criar Usuário: </h2>
 
@@ -37,7 +38,7 @@ sudo apt-get install wkhtmltopdf  <br/>
 sudo git clone --depth 1 --branch 10.0 https://github.com/odoo/odoo.git <br/>
 
 
-Iniciar o Odoo:
+<h2> Iniciar o Odoo: </h2>
 
 cd odoo <br/>
 wget https://raw.githubusercontent.com/Trust-Code/Tutorial-Instalacao/master/odoo-config <br/>
