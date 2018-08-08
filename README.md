@@ -1,4 +1,4 @@
-# script_Instalacao
+# script_instalacao_odoo
 <table><tr><td>
 <h4> Se houver erro LOCALE ao criar SSH: </h4>
  
